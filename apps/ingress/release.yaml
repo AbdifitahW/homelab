@@ -11,3 +11,9 @@ spec:
     name: traefik
     namespace: kube-system
   timeout: 10m
+  install:
+    disableWait: true
+  upgrade:
+    disableWait: true
+  rollback:
+    disableWait: true
