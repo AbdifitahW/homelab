@@ -8,5 +8,8 @@ spec:
   interval: 30m0s
   provider: generic
   ref:
-    tag: 37.0.0
+    tag: 37.1.1
   url: oci://ghcr.io/traefik/helm/traefik
+  layerSelector:
+    mediaType: "application/vnd.cncf.helm.chart.content.v1.tar+gzip"
+    operation: copy
