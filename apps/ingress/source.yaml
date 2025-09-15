@@ -1,0 +1,12 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: traefik
+  namespace: kube-system
+spec:
+  interval: 30m0s
+  provider: generic
+  ref:
+    tag: 37.1.1
+  url: oci://ghcr.io/traefik/helm/traefik
