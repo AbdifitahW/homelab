@@ -10,3 +10,4 @@ spec:
     kind: OCIRepository
     name: traefik
     namespace: kube-system
+  timeout: 10m
