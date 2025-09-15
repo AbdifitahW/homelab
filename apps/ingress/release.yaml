@@ -5,8 +5,8 @@ metadata:
   name: traefik
   namespace: kube-system
 spec:
+  interval: 1m
   chartRef:
     kind: OCIRepository
     name: traefik
     namespace: kube-system
-  interval: 1m0s
