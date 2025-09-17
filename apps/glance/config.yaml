@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: glance-config
+data:
+  glance.yml: |
+    pages:
+      - name: Home
+        columns:
+          - size: full
+            widgets:
+              - type: monitor
+                title: Services
+                sites:
+                  - title: Grafana
+                    url: http://grafana.homelab.local
+                  - title: Prometheus
+                    url: http://prometheus.homelab.local
+                  - title: Alertmanager
+                    url: http://alertmanager.homelab.local
