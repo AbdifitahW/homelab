@@ -17,6 +17,10 @@ spec:
   install:
     remediation:
       retries: 1
+  upgrade:
+    remediation:
+      retries: 2
+    timeout: 10m
   interval: 5m
   chart:
     spec:
