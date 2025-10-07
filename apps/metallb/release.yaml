@@ -14,6 +14,9 @@ metadata:
   name: metallb
   namespace: metallb-system
 spec:
+  install:
+    remediation:
+      retries: 1
   interval: 5m
   chart:
     spec:
