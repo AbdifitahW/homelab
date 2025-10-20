@@ -26,8 +26,7 @@ This structure allows me to manage the cluster's configuration in a modular and 
 
 | Service | Description | Icon |
 | --- | --- | --- |
-| **Glance** | A self-hosted dashboard that provides a quick overview of my homelab. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/kubernetes-dashboard.png" width="32" height="32"> |
-| **Thanos** | A highly available Prometheus setup with long-term storage capabilities. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/thanos.png" width="32" height="32"> |
+| **Glance** | A self-hosted dashboard that provides a quick overview of my homelab. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-kcons/main/png/kubernetes-dashboard.png" width="32" height="32"> |
 | **MetalLB** | A load-balancer implementation for bare metal Kubernetes clusters. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/metallb.png" width="32" height="32"> |
 | **Pi-hole** | A network-wide ad blocker that protects all my devices from unwanted content. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/pi-hole.png" width="32" height="32"> |
 | **Traefik** | A modern reverse proxy and load balancer that makes deploying microservices easy. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/traefik.png" width="32" height="32"> |
@@ -37,7 +36,7 @@ This structure allows me to manage the cluster's configuration in a modular and 
 
 ## GitOps with FluxCD
 
-I use FluxCD to manage the cluster's state. The `flux-system` directory in the `clusters/thanos` directory contains the configuration for FluxCD. The `gotk-sync.yaml` file defines the synchronization between the cluster and this repository. Any changes pushed to the `main` branch of this repository will be automatically applied to the cluster.
+I use FluxCD to manage the cluster's state. The `flux-system` directory in the `clusters/thanos` directory contains the configuration for FluxCD. The `gotk-sync.yaml` file defines the synchronization between the cluster and this repository. Any changes pushed to the `master` branch of this repository will be automatically applied to the cluster.
 
 ## Future Plans
 
