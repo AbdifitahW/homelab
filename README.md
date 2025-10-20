@@ -32,7 +32,7 @@ This structure allows me to manage the cluster's configuration in a modular and 
 | **Pi-hole** | A network-wide ad blocker that protects all my devices from unwanted content. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/pi-hole.png" width="32" height="32"> |
 | **Traefik** | A modern reverse proxy and load balancer that makes deploying microservices easy. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/traefik.png" width="32" height="32"> |
 | **Talos** | A modern OS for Kubernetes that is secure, immutable, and minimal. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/talos.png" width="32" height="32"> |
-| **Flux** | A tool that automatically ensures that the state of a cluster matches the config in git. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/flux.png" width="32" height="32"> |
+| **Flux** | A tool that automatically ensures that the state of a cluster matches the config in git. | <img src="https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/png/flux-cd.png" width="32" height="32"> |
 | **Monitoring**| A monitoring stack that includes Prometheus, Grafana, and Alertmanager. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/grafana.png" width="32" height="32"> |
 
 ## GitOps with FluxCD
