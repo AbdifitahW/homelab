@@ -26,7 +26,7 @@ This structure allows me to manage the cluster's configuration in a modular and 
 
 | Service | Description | Icon |
 | --- | --- | --- |
-| **Glance** | A self-hosted dashboard that provides a quick overview of my homelab. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-kcons/main/png/kubernetes-dashboard.png" width="32" height="32"> |
+| **Glance** | A self-hosted dashboard that provides a quick overview of my homelab. | <img src="https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/png/glance.png" width="32" height="32"> |
 | **MetalLB** | A load-balancer implementation for bare metal Kubernetes clusters. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/metallb.png" width="32" height="32"> |
 | **Pi-hole** | A network-wide ad blocker that protects all my devices from unwanted content. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/pi-hole.png" width="32" height="32"> |
 | **Traefik** | A modern reverse proxy and load balancer that makes deploying microservices easy. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/traefik.png" width="32" height="32"> |
