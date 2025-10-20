@@ -1,0 +1,12 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: pihole
+  namespace: kube-system
+spec:
+  interval: 5m
+  chartRef:
+    kind: HelmChart
+    name: pihole
+    namespace: pihole
+  timeout: 10m
