@@ -5,8 +5,11 @@ metadata:
   namespace: kube-system
 spec:
   interval: 5m
-  chartRef:
-    kind: HelmChart
-    name: pihole
-    namespace: flux-system
+  chart:
+    spec:
+      chart: pihole
+      sourceRef:
+        kind: HelmRepository
+        name: pihole
+        namespace: flux-system
   timeout: 10m
