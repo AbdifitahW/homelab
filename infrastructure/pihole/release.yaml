@@ -17,3 +17,5 @@ spec:
     dnsmasq:
       customDnsEntries:
         - address=/.homelab.local/10.0.0.230
+    service:
+      type: LoadBalancer
