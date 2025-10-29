@@ -8,5 +8,5 @@ spec:
   chartRef:
     kind: HelmChart
     name: pihole
-    namespace: pihole
+    namespace: flux-system
   timeout: 10m
