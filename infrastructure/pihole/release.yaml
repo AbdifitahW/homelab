@@ -19,3 +19,4 @@ spec:
         - address=/.homelab.local/10.0.0.230
     serviceDns:
       type: LoadBalancer
+      externalTrafficPolicy: Cluster
