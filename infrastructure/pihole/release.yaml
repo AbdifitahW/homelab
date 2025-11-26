@@ -19,4 +19,6 @@ spec:
         - address=/.homelab.local/10.0.0.230
     serviceDns:
       type: LoadBalancer
+      annotations:
+        metallb.universe.tf/allow-shared-ip: pihole-svc
       externalTrafficPolicy: Cluster
