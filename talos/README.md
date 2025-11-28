@@ -7,3 +7,6 @@ Specs (Control Plane Node)
 - 256 SSD
 - i5 6600T
 
+# sops issues
+
+GPG_TTY needs to set to current TTY or you won't be able to decrypt secret.yaml 
