@@ -19,4 +19,4 @@ spec:
         kind: HelmRepository
         name: rook-ceph
         namespace: flux-system
-      version: "1.18.8"
+      version: "1.19"
