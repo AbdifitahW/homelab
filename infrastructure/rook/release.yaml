@@ -13,10 +13,10 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: rook-release
+      chart: rook-ceph
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: rook-ceph
+        name: rook-release
         namespace: flux-system
       version: "1.19"
