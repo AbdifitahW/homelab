@@ -3,3 +3,4 @@ resources:
   - metallb
   - monitoring
   - pihole
+  - smallstep
