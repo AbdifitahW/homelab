@@ -20,3 +20,22 @@ spec:
         name: rook-release
         namespace: flux-system
       version: "1.18.8"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: rook-ceph-cluster
+spec:
+  interval: 5m
+  dependsOn:
+    - name: rook-ceph
+      namespace: rook-ceph
+  chart:
+    spec:
+      chart: rook-ceph-cluster
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: rook-release
+        namespace: flux-system
+      version: "1.18.8"
