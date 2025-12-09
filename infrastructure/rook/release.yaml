@@ -45,8 +45,9 @@ spec:
     cephClusterSpec:
       resources:
         mon:
-          cpu: 500m
-          memory: 512Mi
+          requests:
+            cpu: 500m
+            memory: 512Mi
       mon:
         count: 1
         allowMultiplePerNode: true
