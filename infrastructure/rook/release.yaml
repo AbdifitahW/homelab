@@ -21,6 +21,9 @@ spec:
         name: rook-release
         namespace: flux-system
       version: "1.18.8"
+  values:
+    csi:
+      enabledCephfsDriver: false
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
