@@ -23,7 +23,7 @@ spec:
       version: "1.18.8"
   values:
     csi:
-      enabledCephfsDriver: false
+      enableCephfsDriver: false
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
