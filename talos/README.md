@@ -10,3 +10,6 @@ Specs (Control Plane Node)
 # sops issues
 
 GPG_TTY needs to set to current TTY or you won't be able to decrypt secret.yaml 
+
+``` bash
+export GPG_TTY=$(tty)

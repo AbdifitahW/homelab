@@ -1,2 +1,5 @@
 talosconfig
 kubeconfig
+
+# Generated Configs
+talos/generated/*
