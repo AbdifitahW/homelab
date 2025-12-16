@@ -46,6 +46,15 @@ spec:
       version: "1.18.8"
   values:
     cephClusterSpec:
+      storage:
+        useAllNodes: false
+        nodes:
+          - name: control-plane
+            devices:
+              - name: sda
+          - name: worker1
+            devices:
+              - name: nvme0n1
       resources:
         mon:
           requests:
