@@ -49,12 +49,9 @@ spec:
       storage:
         useAllNodes: false
         nodes:
-          - name: control-plane
-            devices:
-              - name: sda
           - name: worker1
             devices:
-              - name: nvme0n1
+              - name: nvme1n1
       resources:
         mon:
           requests:
