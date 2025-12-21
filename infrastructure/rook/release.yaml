@@ -51,6 +51,13 @@ spec:
           replicated:
             size: 1
             requireSafeReplicaSize: false
+        storageClass:
+          enabled: true
+          name: ceph-block
+          isDefault: true
+          reclaimPolicy: Delete
+          allowVolumeExpansion: true
+          volumeBindingMode: Immediate
     configOverride: |
       [global]
       osd_pool_default_size=1
