@@ -45,6 +45,16 @@ spec:
         namespace: flux-system
       version: "1.18.8"
   values:
+    cephBlockPools:
+      - name: ceph-blockpool
+        spec:
+          replicated:
+            size: 1
+            requireSafeReplicaSize: false
+    configOverride: |
+      [global]
+      osd_pool_default_size=1
+      osd_pool_default_min_size = 1
     cephClusterSpec:
       storage:
         useAllNodes: false
