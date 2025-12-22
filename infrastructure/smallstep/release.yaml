@@ -19,10 +19,3 @@ spec:
         name: smallstep
         namespace: flux-system
       version: "1.29"
-  values:
-    bootstrap:
-      enabled: true
-      email: admin@homlab.local
-    service:
-      dnsNames:
-        - step-ca.homelab.local
