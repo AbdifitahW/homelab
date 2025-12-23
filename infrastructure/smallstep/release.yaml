@@ -19,3 +19,12 @@ spec:
         name: smallstep
         namespace: flux-system
       version: "1.29"
+  values:
+    inject:
+      config:
+        files:
+          ca.json:
+            authority:
+              provisioners:
+                - type: ACME
+                  name: acme
