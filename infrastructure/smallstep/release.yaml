@@ -21,7 +21,6 @@ spec:
       version: "1.29"
   values:
     inject:
-      enabled: true
       config:
         files:
           ca.json:
