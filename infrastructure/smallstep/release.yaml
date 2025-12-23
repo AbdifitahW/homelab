@@ -26,5 +26,5 @@ spec:
           ca.json:
             authority:
               provisioners:
-                - type: ACME
-                  name: acme
+                - name: acme
+                  type: ACME
