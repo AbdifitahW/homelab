@@ -26,55 +26,74 @@ spec:
     inject:
       config:
         files:
-          ca.json: |
-            {
-                    "root": "/home/step/certs/root_ca.crt",
-                    "federatedRoots": null,
-                    "crt": "/home/step/certs/intermediate_ca.crt",
-                    "key": "/home/step/secrets/intermediate_ca_key",
-                    "address": ":9000",
-                    "insecureAddress": "",
-                    "dnsNames": [
-                            "step-ca-step-certificates.step-ca.svc.cluster.local",
-                            "127.0.0.1"
-                    ],
-                    "logger": {
-                            "format": "text"
-                    },
-                    "db": {
-                            "type": "badgerv2",
-                            "dataSource": "/home/step/db",
-                            "badgerFileLoadingMode": ""
-                    },
-                    "authority": {
-                            "provisioners": [
-                                    {
-                                            "type": "JWK",
-                                            "name": "admin",
-                                            "key": {
-                                                    "use": "sig",
-                                                    "kty": "EC",
-                                                    "kid": "wkE85t8KSPpJX_wsQzyVSMSVYfHbC6a5SE8PKjWRxdo",
-                                                    "crv": "P-256",
-                                                    "alg": "ES256",
-                                                    "x": "W2X9FmZGrKLGBQd7GU_EuLscXdHCaq9IpejnvDONj5I",
-                                                    "y": "yHfgjxTcYK0H8R5mj7cn8NzEMQWSCARi_yRg9HmYe1w"
-                                            },
-                                            "encryptedKey": "eyJhbGciOiJQQkVTMi1IUzI1NitBMTI4S1ciLCJjdHkiOiJqd2sranNvbiIsImVuYyI6IkEyNTZHQ00iLCJwMmMiOjEwMDAwMCwicDJzIjoiNEZzbUF5Qm1uUm5MN1hOYlpRR1ZEQSJ9.3Yd1_fUCaChzsqtEHhNci-pIkgTgMXS4sK4uVY8iAwt_ZKSEUfDMDg.nDDHK--mmGDoxZo3.eq5l9GCUJw16xEuIpPAlggbBjpwJDleuvgHbd6HvvICwjs2GUxfBIsXOuQhYZzQK4GawiM9GXeHrYSO48vg3SpnfI8kvrs6tsjjKQnu_wo9FrUha0R-bi3lKvkXcS9_3HcuXRRIKv1ToUIAAyFIB52jd0CaHpdA1kPBfQmv2Ac9R55sMLO4RIDYLnT0_eZ8U88YP_QegtJbw4polCCYrThWKIhbwMLCsaUV2zYtctB1n0qGA2oW3KOIfIBYYC75Xt7XV6SVCRfV6_O6HGQKNWpk0M8spb13R-6ytwxYiwlb2aJCZ3o5caIOHJeXjIEpAlDJYOI4vikXS85Lpkfk.b7Xq5PpbTlzcd_zno9QD2g"
-                                    },
-                                    {
-                                            "type": "ACME",
-                                            "name": "acme",
-                                    }
-                            ]
-                    },
-                    "tls": {
-                            "cipherSuites": [
-                                    "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
-                                    "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
-                            ],
-                            "minVersion": 1.2,
-                            "maxVersion": 1.3,
-                            "renegotiation": false
-                    }
-              }
+          ca.json:
+            root: /home/step/certs/root_ca.crt
+            crt: /home/step/certs/intermediate_ca.crt
+            key: /home/step/secrets/intermediate_ca_key
+            db:
+              type: badgerv2
+              dataSource: /home/step/db
+            authority:
+              provisioners:
+                - type: ACME
+                  name: acme
+            tls:
+              cipherSuites:
+                - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+                - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+                - TLS_AES_128_GCM_SHA256
+              minVersion: 1.2
+              maxVersion: 1.3
+              renegotiation: false
+          #
+          #  {
+          #          "root": "/home/step/certs/root_ca.crt",
+          #          "federatedRoots": null,
+          #          "crt": "/home/step/certs/intermediate_ca.crt",
+          #          "key": "/home/step/secrets/intermediate_ca_key",
+          #          "address": ":9000",
+          #          "insecureAddress": "",
+          #          "dnsNames": [
+          #                  "step-ca-step-certificates.step-ca.svc.cluster.local",
+          #                  "127.0.0.1"
+          #          ],
+          #          "logger": {
+          #                  "format": "text"
+          #          },
+          #          "db": {
+          #                  "type": "badgerv2",
+          #                  "dataSource": "/home/step/db",
+          #                  "badgerFileLoadingMode": ""
+          #          },
+          #          "authority": {
+          #                  "provisioners": [
+          #                          {
+          #                                  "type": "JWK",
+          #                                  "name": "admin",
+          #                                  "key": {
+          #                                          "use": "sig",
+          #                                          "kty": "EC",
+          #                                          "kid": "wkE85t8KSPpJX_wsQzyVSMSVYfHbC6a5SE8PKjWRxdo",
+          #                                          "crv": "P-256",
+          #                                          "alg": "ES256",
+          #                                          "x": "W2X9FmZGrKLGBQd7GU_EuLscXdHCaq9IpejnvDONj5I",
+          #                                          "y": "yHfgjxTcYK0H8R5mj7cn8NzEMQWSCARi_yRg9HmYe1w"
+          #                                  },
+          #                                  "encryptedKey": "eyJhbGciOiJQQkVTMi1IUzI1NitBMTI4S1ciLCJjdHkiOiJqd2sranNvbiIsImVuYyI6IkEyNTZHQ00iLCJwMmMiOjEwMDAwMCwicDJzIjoiNEZzbUF5Qm1uUm5MN1hOYlpRR1ZEQSJ9.3Yd1_fUCaChzsqtEHhNci-pIkgTgMXS4sK4uVY8iAwt_ZKSEUfDMDg.nDDHK--mmGDoxZo3.eq5l9GCUJw16xEuIpPAlggbBjpwJDleuvgHbd6HvvICwjs2GUxfBIsXOuQhYZzQK4GawiM9GXeHrYSO48vg3SpnfI8kvrs6tsjjKQnu_wo9FrUha0R-bi3lKvkXcS9_3HcuXRRIKv1ToUIAAyFIB52jd0CaHpdA1kPBfQmv2Ac9R55sMLO4RIDYLnT0_eZ8U88YP_QegtJbw4polCCYrThWKIhbwMLCsaUV2zYtctB1n0qGA2oW3KOIfIBYYC75Xt7XV6SVCRfV6_O6HGQKNWpk0M8spb13R-6ytwxYiwlb2aJCZ3o5caIOHJeXjIEpAlDJYOI4vikXS85Lpkfk.b7Xq5PpbTlzcd_zno9QD2g"
+          #                          },
+          #                          {
+          #                                  "type": "ACME",
+          #                                  "name": "acme",
+          #                          }
+          #                  ]
+          #          },
+          #          "tls": {
+          #                  "cipherSuites": [
+          #                          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          #                          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
+          #                  ],
+          #                  "minVersion": 1.2,
+          #                  "maxVersion": 1.3,
+          #                  "renegotiation": false
+          #          }
+          #    }
