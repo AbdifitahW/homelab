@@ -20,11 +20,6 @@ spec:
         namespace: flux-system
       version: "1.29"
   values:
-    inject:
-      config:
-        files:
-          ca.json:
-            authority:
-              provisioners:
-                - name: acme
-                  type: ACME
+    bootstrap:
+      # Bootstrap to create secrets then manually add acme as a provider via cli
+      enabled: true
