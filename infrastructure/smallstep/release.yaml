@@ -24,6 +24,7 @@ spec:
       # Bootstrap to create secrets then manually add acme as a provider via cli
       enabled: false
     inject:
+      enabled: true
       config:
         files:
           ca.json:
