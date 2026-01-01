@@ -19,7 +19,6 @@ spec:
         name: smallstep
         namespace: flux-system
       version: "1.29"
-  # Helm template
   values:
     inject:
       enabled: true
@@ -49,13 +48,13 @@ spec:
                       {
                         "use": "sig",
                         "kty": "EC",
-                        "kid": "n_-ZpgxrBH92ZmZKzSeB74uAqzlib4nNxH6VQAIO3yo",
+                        "kid": "h7CXYbIzh4T1lYVXiSnMPGRtT9uyrLU_p2ae_9N5h3E",
                         "crv": "P-256",
                         "alg": "ES256",
-                        "x": "kmgZME-yYoN7uWSifhUw8zRjzsfaQ4KjsYuhFyarNQI",
-                        "y": "qmWpsw-xtz6mZHYtys2Jt1J7JxnU_8MPIgAPi01OAhg",
+                        "x": "KkZCuLkiVdjFPiP33FspothOtnJiw3nA6va_bULoMXI",
+                        "y": "9NZu0F0tIwDUw5MzpiCpJWvgr8SMu93pKi4ExFoDuvE",
                       },
-                    "encryptedKey": "eyJhbGciOiJQQkVTMi1IUzI1NitBMTI4S1ciLCJjdHkiOiJqd2sranNvbiIsImVuYyI6IkEyNTZHQ00iLCJwMmMiOjYwMDAwMCwicDJzIjoiNGZIcjhwcHBpaDBrajZ5MVYxVG5YdyJ9.7CztkSIV-284kjNZQJHYP3rrK9lgghpnzGVz7v1iM_30gQrUyRZ-KQ.vLpsD7tbfn2brtVU.GAjYviNvphn23ILJWLgpGFv-lboh-JxGPh7l_IyqPjmhPCiw6PUSv9atzdWuylwmDKN157VbYW_lGHu5UrhfoLoqVP3zXvMhSdj5b-RNEQyhaG1OXjk2bJBa09d-6B79HoYq3JOf2w6lVDQiHMLQsU3xiDQElQold--pWmm63ZxAiZQ4Z066SJlxGX5TO2L1XpmO2pSV7E-dDpY6N1cSTwTZauSv11Yfs9FbpZGT0F6dzWGmPnBPO11MVR2e_rhQkXCy5TXSoPW_K8eW3zqmE0vhVtRVKAC-7QBAIKuhEtGKbomo-oHQEskKB4nTaH5mf0mKi7BpwsgXwk9VkNU.n03aTGCJnyVZXV99hiMiRw",
+                    "encryptedKey": "eyJhbGciOiJQQkVTMi1IUzI1NitBMTI4S1ciLCJjdHkiOiJqd2sranNvbiIsImVuYyI6IkEyNTZHQ00iLCJwMmMiOjYwMDAwMCwicDJzIjoiLVRobXU3MUtFeTQ5UEhpRnJzMmdOZyJ9.r5mqTHB798POOMtTlcOdkp3ey9vuHTcCTPBm-wUM0oeX_jjIfG7T4A.0LdqyMzPBjL2pTRh.6ECwc97IreUh-EzygyOhgM6yOLZ4jCdBgSdZxrXWDJk_KwTNRJW7v0j_A6rBbPOCPAnDf0eQS3SxjVJNWzrnQjaBI645KgE1J_c9as7NSx1oQ6tLTGsJB73z5dT81svZz__k6WhZlNFHDm8kykJOwZG8M-vzqxK7rq9f-M56cihdFNJEnVMdaMZM_q5VVtzd5friNkqhRW94Yw3TKXLTUiPvNCSIUUcy66qABmfxk1fCgMwoBWn3cbdxeihOFAYoVcZTkDEX5IVM8sDAgwhjbs00SLWGGo17jBiCZ96cDMy7YHSHnAdaab8JoTx00f-tI4AXjnPuHdJr2iYGYZE.A1wv_HNxQVBVCOOuGAwmfA",
                     "options": { "x509": {}, "ssh": {} },
                   }
                 - type: ACME
@@ -71,7 +70,7 @@ spec:
           defaults.json:
             ca-url: https://ca.homelab.local
             ca-config: /home/step/config/ca.json
-            fingerprint: ad1aa11c806f556f71c1573e96148ede75816f48856a423d0473d0c63666c655
+            fingerprint: adbfd8f09e7640423d3fc4e5a04bb4fb899215cc364ce12ece182c441d3420f1
             root: /home/step/certs/root_ca.crt
 
       # Certificates contains the root and intermediate certificate and
@@ -80,30 +79,30 @@ spec:
         # intermediate_ca contains the text of the intermediate CA Certificate
         intermediate_ca: |
           -----BEGIN CERTIFICATE-----
-          MIIB0DCCAXagAwIBAgIQFYNuKCM3QDDNXsqREuCBEDAKBggqhkjOPQQDAjAyMRMw
-          EQYDVQQKEwpDQS1Ib21lbGFiMRswGQYDVQQDExJDQS1Ib21lbGFiIFJvb3QgQ0Ew
-          HhcNMjUxMjMxMjMyODA3WhcNMzUxMjI5MjMyODA3WjA6MRMwEQYDVQQKEwpDQS1I
-          b21lbGFiMSMwIQYDVQQDExpDQS1Ib21lbGFiIEludGVybWVkaWF0ZSBDQTBZMBMG
-          ByqGSM49AgEGCCqGSM49AwEHA0IABKANCnq7s6xFFRZJJIzGzDHgsaiVXuagVdkJ
-          ri+oUzXi2NWXb6BCbzpC9zVRT4jJ3PRL0r9alM+ZE0fhFc+XyiOjZjBkMA4GA1Ud
-          DwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBTNs2MG2QHJ
-          qPM6xD6M5B4DXbmX1DAfBgNVHSMEGDAWgBRPVccflhaVqQPqOqRlHX7Y7+vRYjAK
-          BggqhkjOPQQDAgNIADBFAiEA3aWf1yk4Oj+c4ljfMuTJzBEm2DyTvgjvKBExKTt5
-          8OICIEeOJjyCJxwzMYdIKnb23mTD7Bk/5zRJ7VoscL6ntLam
+          MIIBzzCCAXagAwIBAgIQRVDpySMf8h5tlqrGp8LhkTAKBggqhkjOPQQDAjAyMRMw
+          EQYDVQQKEwpDQS1ob21lbGFiMRswGQYDVQQDExJDQS1ob21lbGFiIFJvb3QgQ0Ew
+          HhcNMjYwMTAxMjIxMTE1WhcNMzUxMjMwMjIxMTE1WjA6MRMwEQYDVQQKEwpDQS1o
+          b21lbGFiMSMwIQYDVQQDExpDQS1ob21lbGFiIEludGVybWVkaWF0ZSBDQTBZMBMG
+          ByqGSM49AgEGCCqGSM49AwEHA0IABKVKGOmrl5MiX8uvM+lK13YeFUc2lJy0kU4q
+          LEfuhqU30ZHjnORs24zMgFqhHHaf7Sn/wW1Ph9j7GwOZ1qoJT/yjZjBkMA4GA1Ud
+          DwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBSVsIdjqpzo
+          x1KQ6YrrVKU/TFWlzTAfBgNVHSMEGDAWgBROfu+IfySU39mSYjxjQ7PsItSuIDAK
+          BggqhkjOPQQDAgNHADBEAiARNjiIsHgHc2EaF9zZMouraMvKJc4VH1oEfkMosYBK
+          XwIgL7gxLC1S+TxbLEyadigW/pL5qjzFBr1nIjKyUzPPkl0=
           -----END CERTIFICATE-----
 
         # root_ca contains the text of the root CA Certificate
         root_ca: |
           -----BEGIN CERTIFICATE-----
-          MIIBqDCCAU2gAwIBAgIQAJUV4Vuri8aXip/ST14/4jAKBggqhkjOPQQDAjAyMRMw
-          EQYDVQQKEwpDQS1Ib21lbGFiMRswGQYDVQQDExJDQS1Ib21lbGFiIFJvb3QgQ0Ew
-          HhcNMjUxMjMxMjMyODA2WhcNMzUxMjI5MjMyODA2WjAyMRMwEQYDVQQKEwpDQS1I
-          b21lbGFiMRswGQYDVQQDExJDQS1Ib21lbGFiIFJvb3QgQ0EwWTATBgcqhkjOPQIB
-          BggqhkjOPQMBBwNCAAQY2EnqvWgWT84CE5cxK8Bm7hQ29d+tpmXaCeZtx0kbTXEP
-          MHqCpJyVZ1J0F3bShDfbJ6d46z8drwruB4xBoMuso0UwQzAOBgNVHQ8BAf8EBAMC
-          AQYwEgYDVR0TAQH/BAgwBgEB/wIBATAdBgNVHQ4EFgQUT1XHH5YWlakD6jqkZR1+
-          2O/r0WIwCgYIKoZIzj0EAwIDSQAwRgIhAMqpMvgnyBgx7SNdQJiFlHi/hEzzkbl3
-          OBXBjUoBtpKpAiEA/NzgNCnCcPPEv5vJm2iWzOEAoGeeN1z6Lsg+xA1R7Gg=
+          MIIBpzCCAU6gAwIBAgIRAJkmAUcqMXWbl0D0Ynl29qUwCgYIKoZIzj0EAwIwMjET
+          MBEGA1UEChMKQ0EtaG9tZWxhYjEbMBkGA1UEAxMSQ0EtaG9tZWxhYiBSb290IENB
+          MB4XDTI2MDEwMTIyMTExNFoXDTM1MTIzMDIyMTExNFowMjETMBEGA1UEChMKQ0Et
+          aG9tZWxhYjEbMBkGA1UEAxMSQ0EtaG9tZWxhYiBSb290IENBMFkwEwYHKoZIzj0C
+          AQYIKoZIzj0DAQcDQgAEZunSl/GqhiTC+cC1KFOK/7Ul155vUUcEvUkQ5/y1UlE/
+          xacb7k1rXD/kcvb3lkXRI+ay69k2l3Linl9tdlwfOKNFMEMwDgYDVR0PAQH/BAQD
+          AgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFE5+74h/JJTf2ZJiPGND
+          s+wi1K4gMAoGCCqGSM49BAMCA0cAMEQCIG4PYNUpyQSmXPCl+3iL9iinzbBdp/iF
+          v2HPhgT0mvHFAiBgt59bzBSM1muFH4lb4G2MBkJNgVO1ykwFZaALBgvDEA==
           -----END CERTIFICATE-----
 
       # Secrets contains the root and intermediate keys and optionally the SSH
@@ -111,19 +110,19 @@ spec:
       secrets:
         # ca_password contains the password used to encrypt x509.intermediate_ca_key, ssh.host_ca_key and ssh.user_ca_key
         # This value must be base64 encoded.
-        ca_password: eWFXQWdOdFhBNm1SVmdtNVh2c3hPS2JDT1Rja0F1VVcK
-        provisioner_password: eWFXQWdOdFhBNm1SVmdtNVh2c3hPS2JDT1Rja0F1VVcK
+        ca_password: cGFzc3dvcmQK
+        provisioner_password: cGFzc3dvcmQK
 
         x509:
           # intermediate_ca_key contains the contents of your encrypted intermediate CA key
           intermediate_ca_key: |
             -----BEGIN EC PRIVATE KEY-----
             Proc-Type: 4,ENCRYPTED
-            DEK-Info: AES-256-CBC,0925673602283f89ea584416ce553a18
+            DEK-Info: AES-256-CBC,b23c0ced1f943186b42701cfe6aabc49
 
-            5GuGQw3qlyEc1sJCkJme9QqHh6VgNZfAbDjvXLZvgAzo3N6NEJxx239Rx56/SFDz
-            5Gar98x0MwEBuulY5VfH0qLjXQTI9As03JwbX8JktVFvisgI9mi6H92yQt1/qCgh
-            33FZfCexIvf9I8EdYKYH7t+o5lQORHeh38NCqQIpNws=
+            r7OI2NbuYFkCkPXuMr9ubcH7zqHI99PtJW96dBFL/XLFqAW/Z8jsNGcp+JQgRbNu
+            ugGIDWpr0qfxKTnT57indHgcf2WrdHRMuLwhfUwOspG2+y8aa5mpk55qtQ7/skbS
+            X6KI6nAP5IElKyJf/FArJtLB0+kIxiCddiIjvoWyy5U=
             -----END EC PRIVATE KEY-----
 
           # root_ca_key contains the contents of your encrypted root CA key
@@ -133,8 +132,9 @@ spec:
           root_ca_key: |
             -----BEGIN EC PRIVATE KEY-----
             Proc-Type: 4,ENCRYPTED
-            DEK-Info: AES-256-CBC,41e8e17f885e005902502079ab300ba6
+            DEK-Info: AES-256-CBC,5e0b1f1ee2237cca42c6b816855581df
 
-            gD98wMzKVoBT8FEJhUwICuWGGdTDo7W1x2oYifo08Yo96yzMlfaRjiWaeEmkUJu9
-            LvQZcYHZiquoZXCQLg0HPn7ufkhfY7G80IT8cDsdddL0/nNbbGIsuDPUcbyhZnJK
-            ei5km/aSi2v1yxI5WxkgLmuJw9NecVTArmfj1bgWLKw=
+            X2N0a869EB6B97ZiDF2//bwtIOUQUz5Nu86dz58m8ydIHwAd461LImRjuLAuEW0H
+            UNr07GsAnFtty1r7lD+rSYc0aV1NZEXbvchT5r2bI2A2sXQ9Solg4sOpMQLcAoJD
+            eGtbFVUvLDTnCMTTc1jaEKIyzquh95GNXqd4vAaJ9nE=
+            -----END EC PRIVATE KEY-----
