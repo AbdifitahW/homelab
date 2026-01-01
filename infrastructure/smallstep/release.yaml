@@ -9,7 +9,7 @@ metadata:
   name: step-ca
   namespace: step-ca
 spec:
-  interval: 5m
+  interval: 30m
   chart:
     spec:
       chart: step-certificates
