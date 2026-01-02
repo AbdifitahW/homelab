@@ -32,7 +32,6 @@ spec:
             key: /home/step/secrets/intermediate_ca_key
             address: :9000
             dnsNames:
-              - ca.homelab.local
               - step-ca-step-certificates.step-ca.svc.cluster.local
               - 127.0.0.1
             logger:
