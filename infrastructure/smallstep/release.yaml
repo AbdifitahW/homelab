@@ -30,7 +30,7 @@ spec:
             federateRoots: []
             crt: /home/step/certs/intermediate_ca.crt
             key: /home/step/secrets/intermediate_ca_key
-            address: :9000
+            address: :443
             dnsNames:
               - ca.homelab.local
               - step-ca-step-certificates.step-ca.svc.cluster.local
