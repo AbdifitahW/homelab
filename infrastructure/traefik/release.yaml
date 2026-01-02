@@ -30,3 +30,5 @@ spec:
           storage: /step-ca/acme.json
           certificatesDuration: 72
           tlsChallenge: true
+    podSecurityContext:
+      fsGroup: 65532
