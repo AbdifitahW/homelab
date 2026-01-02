@@ -20,14 +20,14 @@ spec:
   values:
     persistence:
       enabled: true
-      path: /step-ca
+      path: /data
       size: 1Gi
     certificatesResolvers:
       homelab:
         acme:
           email: admin
           caServer: https://step-ca-step-certificates.step-ca.svc.cluster.local:9000/acme/acme/directory
-          storage: /step-ca/acme.json
+          storage: /data/acme.json
           certificatesDuration: 72
           tlsChallenge: true
     podSecurityContext:
