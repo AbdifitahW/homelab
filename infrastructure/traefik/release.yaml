@@ -24,8 +24,12 @@ spec:
         # Related issue: https://github.com/traefik/traefik-helm-chart/issues/396
         - name: volume-permissions
           image: busybox:1.36
-          command:       
-          ["sh", "-c", "touch /data/acme.json; chmod -v 600 /data/acme.json; adduser -S 65532 65532; chown -R 65532:65532 /data/acme.json"]
+          command:
+            [
+              "sh",
+              "-c",
+              "touch /data/acme.json; chmod -v 600 /data/acme.json; adduser -S 65532 65532; chown -R 65532:65532 /data/acme.json",
+            ]
     persistence:
       enabled: true
       path: /data
