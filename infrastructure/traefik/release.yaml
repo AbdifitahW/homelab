@@ -33,6 +33,16 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /data
+      additionalVolumes:
+        - name: step-ca-root-cert
+          configMap:
+            name: step-ca-root-cert
+      additionalVolumeMounts:
+        - name: step-ca-root-cert
+          mountPath: /etc/ssl/certs/step-ca
+    env:
+      - name: LEGO_CA_CERTIFICATES
+        value: /etc/ssl/certs/step-ca/root_ca.crt
     persistence:
       enabled: true
       path: /data
@@ -52,11 +62,3 @@ spec:
       runAsUser: 65532
       fsGroup: 65532
       fsGroupChangePolicy: "OnRootMismatch"
-    volumes:
-      - name: step-ca-root-cert
-        mountPath: /etc/ssl/certs/step-ca
-        type: configMap
-        name: step-ca-root-cert
-    env:
-      - name: LEGO_CA_CERTIFICATES
-        value: /etc/ssl/certs/step-ca/root_ca.crt
