@@ -1,4 +1,5 @@
 resources:
   - namespace.yaml
+  - ca-configmap.yaml
   - oci-repository.yaml
   - release.yaml
