@@ -42,7 +42,7 @@ spec:
       homelab:
         acme:
           email: admin
-          caServer: https://step-ca-step-certificates.step-ca.svc.cluster.local:9000/acme/acme/directory
+          caServer: https://step-ca-step-certificates.step-ca.svc.cluster.local/acme/acme/directory
           storage: /data/acme.json
           certificatesDuration: 72
           tlsChallenge: true
