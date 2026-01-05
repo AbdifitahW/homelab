@@ -33,16 +33,16 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /data
-      additionalVolumes:
-        - name: step-ca-root-cert
-          configMap:
-            name: step-ca-root-cert
-      additionalVolumeMounts:
-        - name: step-ca-root-cert
-          mountPath: /etc/ssl/certs/step-ca
+    additionalVolumes:
+      - name: step-ca-root-cert
+        configMap:
+          name: step-ca-root-cert
+    additionalVolumeMounts:
+      - name: step-ca-root-cert
+        mountPath: /data/step-ca
     env:
       - name: LEGO_CA_CERTIFICATES
-        value: /etc/ssl/certs/step-ca/root_ca.crt
+        value: /data/step-ca/root_ca.crt
     persistence:
       enabled: true
       path: /data
