@@ -3,3 +3,6 @@ kubeconfig
 
 # Generated Configs
 talos/generated/*
+
+#
+GEMINI.md 
