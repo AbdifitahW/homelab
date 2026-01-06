@@ -16,3 +16,5 @@ spec:
       version: "1.45"
   values:
     k8sAppLabelOverride: "kube-dns"
+    service:
+      name: kube-dns
