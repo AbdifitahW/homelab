@@ -18,6 +18,13 @@ spec:
   rollback:
     disableWait: true
   values:
+    web:
+      port: 80
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+          permanent: true
     deployment:
       initContainers:
         # The "volume-permissions" init container is required if you run into permission issues.
