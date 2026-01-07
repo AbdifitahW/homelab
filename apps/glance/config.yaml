@@ -60,6 +60,16 @@ data:
               units: metric
               hour-format: 12h
 
+            - type: monitor
+                title: Services
+                sites:
+                  - title: Grafana
+                    url: http://grafana.homelab.local
+                  - title: Prometheus
+                    url: http://prometheus.homelab.local
+                  - title: Alertmanager
+                    url: http://alertmanager.homelab.local 
+
             - type: markets
               markets:
                 - symbol: SPY
