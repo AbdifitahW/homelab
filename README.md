@@ -34,7 +34,7 @@ This structure allows me to manage the cluster's configuration in a modular and 
 | **Flux** | A tool that automatically ensures that the state of a cluster matches the config in git. | <img src="https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/png/flux-cd.png" width="32" height="32"> |
 | **Monitoring**| A monitoring stack that includes Prometheus, Grafana, and Alertmanager. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/grafana.png" width="32" height="32"> |
 | **Rook-Ceph** | Cloud-native storage orchestrator providing persistent block storage. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/rook.png" width="32" height="32"> |
-| **Smallstep** | A private certificate authority (CA) for securing internal services. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/smallstep.png" width="32" height="32"> |
+| **Step-ca** | A private certificate authority (CA) for securing internal services. | <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/step-ca.png" width="32" height="32"> |
 | **CoreDNS** | Flexible and extensible DNS server for Kubernetes service discovery. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/coredns.png" width="32" height="32"> |
 
 ## GitOps with FluxCD
