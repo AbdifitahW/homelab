@@ -33,6 +33,9 @@ This structure allows me to manage the cluster's configuration in a modular and 
 | **Talos** | A modern OS for Kubernetes that is secure, immutable, and minimal. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/talos.png" width="32" height="32"> |
 | **Flux** | A tool that automatically ensures that the state of a cluster matches the config in git. | <img src="https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/png/flux-cd.png" width="32" height="32"> |
 | **Monitoring**| A monitoring stack that includes Prometheus, Grafana, and Alertmanager. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/grafana.png" width="32" height="32"> |
+| **Rook-Ceph** | Cloud-native storage orchestrator providing persistent block storage. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/rook.png" width="32" height="32"> |
+| **Smallstep** | A private certificate authority (CA) for securing internal services. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/smallstep.png" width="32" height="32"> |
+| **CoreDNS** | Flexible and extensible DNS server for Kubernetes service discovery. | <img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/coredns.png" width="32" height="32"> |
 
 ## GitOps with FluxCD
 
@@ -42,7 +45,6 @@ I use FluxCD to manage the cluster's state. The `flux-system` directory in the `
 
 I plan to expand this cluster in the future by adding more nodes. I also plan to add more services to the cluster, such as:
 
-*   A distributed storage solution, such as Ceph or Longhorn.
 *   A continuous integration and delivery (CI/CD) pipeline.
 *   A logging and monitoring solution, such as the ELK stack.
 
