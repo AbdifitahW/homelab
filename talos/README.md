@@ -1,11 +1,9 @@
 # TALOS HARDWARE
  
-Currently running a Single node cluster spun up with a bare metal image. The hardware is just a ***HP ELITEDESK MINI 800 G3*** 
-
-Specs (Control Plane Node)
-- 8GB DDR4
-- 256 SSD
-- i5 6600T
+| Device | OS Disk   | Data Disk | RAM |
+| --------------- | --------------- | --------------- | --------------- |
+| 1x HP Elitedesk Mini (Control Plane) | 256 GB  | N/a | 8 GB |
+| 1x Lenovo T480 (Worker) | 256 GB  | 512 GB | 16 GB | 
 
 # sops issues
 
