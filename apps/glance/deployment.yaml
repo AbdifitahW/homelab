@@ -14,16 +14,16 @@ spec:
         app: glance
     spec:
       containers:
-      - name: glance
-        image: glanceapp/glance:latest
-        command: ["/app/glance"]
-        args: ["--config", "/app/config/glance.yml"]
-        ports:
-        - containerPort: 8080
-        volumeMounts:
-        - name: glance-config
-          mountPath: /app/config
+        - name: glance
+          image: glanceapp/glance:v0.8.4
+          command: ["/app/glance"]
+          args: ["--config", "/app/config/glance.yml"]
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: glance-config
+              mountPath: /app/config
       volumes:
-      - name: glance-config
-        configMap:
-          name: glance-config
+        - name: glance-config
+          configMap:
+            name: glance-config

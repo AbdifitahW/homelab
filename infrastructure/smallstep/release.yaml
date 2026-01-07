@@ -106,36 +106,9 @@ spec:
           v2HPhgT0mvHFAiBgt59bzBSM1muFH4lb4G2MBkJNgVO1ykwFZaALBgvDEA==
           -----END CERTIFICATE-----
 
-      # Secrets contains the root and intermediate keys and optionally the SSH
-      # private keys
-      secrets:
-        # ca_password contains the password used to encrypt x509.intermediate_ca_key, ssh.host_ca_key and ssh.user_ca_key
-        # This value must be base64 encoded.
-        ca_password: cGFzc3dvcmQK
-        provisioner_password: cGFzc3dvcmQK
+  valuesFrom:
+    - kind: Secret
+      name: step-ca-secrets
+      valuesKey: values.yaml
 
-        x509:
-          # intermediate_ca_key contains the contents of your encrypted intermediate CA key
-          intermediate_ca_key: |
-            -----BEGIN EC PRIVATE KEY-----
-            Proc-Type: 4,ENCRYPTED
-            DEK-Info: AES-256-CBC,b23c0ced1f943186b42701cfe6aabc49
 
-            r7OI2NbuYFkCkPXuMr9ubcH7zqHI99PtJW96dBFL/XLFqAW/Z8jsNGcp+JQgRbNu
-            ugGIDWpr0qfxKTnT57indHgcf2WrdHRMuLwhfUwOspG2+y8aa5mpk55qtQ7/skbS
-            X6KI6nAP5IElKyJf/FArJtLB0+kIxiCddiIjvoWyy5U=
-            -----END EC PRIVATE KEY-----
-
-          # root_ca_key contains the contents of your encrypted root CA key
-          # Note that this value can be omitted without impacting the functionality of step-certificates
-          # If supplied, this should be encrypted using a unique password that is not used for encrypting
-          # the intermediate_ca_key, ssh.host_ca_key or ssh.user_ca_key.
-          root_ca_key: |
-            -----BEGIN EC PRIVATE KEY-----
-            Proc-Type: 4,ENCRYPTED
-            DEK-Info: AES-256-CBC,5e0b1f1ee2237cca42c6b816855581df
-
-            X2N0a869EB6B97ZiDF2//bwtIOUQUz5Nu86dz58m8ydIHwAd461LImRjuLAuEW0H
-            UNr07GsAnFtty1r7lD+rSYc0aV1NZEXbvchT5r2bI2A2sXQ9Solg4sOpMQLcAoJD
-            eGtbFVUvLDTnCMTTc1jaEKIyzquh95GNXqd4vAaJ9nE=
-            -----END EC PRIVATE KEY-----
