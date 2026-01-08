@@ -49,13 +49,13 @@ spec:
                       {
                         "use": "sig",
                         "kty": "EC",
-                        "kid": "h7CXYbIzh4T1lYVXiSnMPGRtT9uyrLU_p2ae_9N5h3E",
+                        "kid": "dXt6Rp1Ow0uFiSTd-We-YYUKZFuU26TBy39-mKxmkdo",
                         "crv": "P-256",
                         "alg": "ES256",
-                        "x": "KkZCuLkiVdjFPiP33FspothOtnJiw3nA6va_bULoMXI",
-                        "y": "9NZu0F0tIwDUw5MzpiCpJWvgr8SMu93pKi4ExFoDuvE",
+                        "x": "Nj6JXUsYn0qsj5YHkSjrPv9oVesESlB8aAUXSwHfmPw",
+                        "y": "4Z2BilMkb7zrizX-qOa9iX_8zAwXOpQhkFMXitoJLIs",
                       },
-                    "encryptedKey": "eyJhbGciOiJQQkVTMi1IUzI1NitBMTI4S1ciLCJjdHkiOiJqd2sranNvbiIsImVuYyI6IkEyNTZHQ00iLCJwMmMiOjYwMDAwMCwicDJzIjoiLVRobXU3MUtFeTQ5UEhpRnJzMmdOZyJ9.r5mqTHB798POOMtTlcOdkp3ey9vuHTcCTPBm-wUM0oeX_jjIfG7T4A.0LdqyMzPBjL2pTRh.6ECwc97IreUh-EzygyOhgM6yOLZ4jCdBgSdZxrXWDJk_KwTNRJW7v0j_A6rBbPOCPAnDf0eQS3SxjVJNWzrnQjaBI645KgE1J_c9as7NSx1oQ6tLTGsJB73z5dT81svZz__k6WhZlNFHDm8kykJOwZG8M-vzqxK7rq9f-M56cihdFNJEnVMdaMZM_q5VVtzd5friNkqhRW94Yw3TKXLTUiPvNCSIUUcy66qABmfxk1fCgMwoBWn3cbdxeihOFAYoVcZTkDEX5IVM8sDAgwhjbs00SLWGGo17jBiCZ96cDMy7YHSHnAdaab8JoTx00f-tI4AXjnPuHdJr2iYGYZE.A1wv_HNxQVBVCOOuGAwmfA",
+                    "encryptedKey": "eyJhbGciOiJQQkVTMi1IUzI1NitBMTI4S1ciLCJjdHkiOiJqd2sranNvbiIsImVuYyI6IkEyNTZHQ00iLCJwMmMiOjYwMDAwMCwicDJzIjoiM3ptNlBJUTZGN2g5SzF2SExhQjhodyJ9.Cj2RKfAxLhp_FOTAiQ9z2vkXIhihqU47k2RhoT_o8hJ2JoiCUaY0MQ.RbqpY5e1kdy093FB.Kz8e-ML97iqwfNaSKx8RJHSfFWhnDkRX2pd9ItpaZXA29EtvKnqOnoM55HaQ2bNovv3zOTvwgzYZKHNk4acLuBRSSaXS34Nd-8KLOgl72wDHCVHr7db6ycSK4yXVXQARSzabCLjlw532sstRiSnd6rXe0wM-UfGVerJAyYjioG0YIgG4S7YRPtH9voTLYtBtKobx6ZJ9FFlATdyxKMVLR-O8E7MzP29NLFojKV8uesras2JqxQM_OtCVB4b309nAJbESvyfrbMzf0WwTmTCsnW_njgbrxKuPfJI8GEIIcvJP2-n2g5EXi3dPyMutox62EJLbJzdI0T52QX5UakE._cHN6FICSrSsygC3U8k-bA",
                     "options": { "x509": {}, "ssh": {} },
                   }
                 - type: ACME
@@ -69,9 +69,9 @@ spec:
               renegotiation: false
 
           defaults.json:
-            ca-url: https://ca.homelab.local
+            ca-url: https://step-ca-step-certificates.step-ca.svc.cluster.local
             ca-config: /home/step/config/ca.json
-            fingerprint: adbfd8f09e7640423d3fc4e5a04bb4fb899215cc364ce12ece182c441d3420f1
+            fingerprint: d36a965e54431b082d6cd7be84784c698a9f7ccbf5e5c989642b138e3190e3bc
             root: /home/step/certs/root_ca.crt
 
       # Certificates contains the root and intermediate certificate and
@@ -80,35 +80,33 @@ spec:
         # intermediate_ca contains the text of the intermediate CA Certificate
         intermediate_ca: |
           -----BEGIN CERTIFICATE-----
-          MIIBzzCCAXagAwIBAgIQRVDpySMf8h5tlqrGp8LhkTAKBggqhkjOPQQDAjAyMRMw
-          EQYDVQQKEwpDQS1ob21lbGFiMRswGQYDVQQDExJDQS1ob21lbGFiIFJvb3QgQ0Ew
-          HhcNMjYwMTAxMjIxMTE1WhcNMzUxMjMwMjIxMTE1WjA6MRMwEQYDVQQKEwpDQS1o
-          b21lbGFiMSMwIQYDVQQDExpDQS1ob21lbGFiIEludGVybWVkaWF0ZSBDQTBZMBMG
-          ByqGSM49AgEGCCqGSM49AwEHA0IABKVKGOmrl5MiX8uvM+lK13YeFUc2lJy0kU4q
-          LEfuhqU30ZHjnORs24zMgFqhHHaf7Sn/wW1Ph9j7GwOZ1qoJT/yjZjBkMA4GA1Ud
-          DwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBSVsIdjqpzo
-          x1KQ6YrrVKU/TFWlzTAfBgNVHSMEGDAWgBROfu+IfySU39mSYjxjQ7PsItSuIDAK
-          BggqhkjOPQQDAgNHADBEAiARNjiIsHgHc2EaF9zZMouraMvKJc4VH1oEfkMosYBK
-          XwIgL7gxLC1S+TxbLEyadigW/pL5qjzFBr1nIjKyUzPPkl0=
+          MIIB0TCCAXagAwIBAgIQBDvJMY7WiOJe6XS3/mey2DAKBggqhkjOPQQDAjAyMRMw
+          EQYDVQQKEwpDQS1Ib21lbGFiMRswGQYDVQQDExJDQS1Ib21lbGFiIFJvb3QgQ0Ew
+          HhcNMjYwMTA4MDAxODU2WhcNMzYwMTA2MDAxODU2WjA6MRMwEQYDVQQKEwpDQS1I
+          b21lbGFiMSMwIQYDVQQDExpDQS1Ib21lbGFiIEludGVybWVkaWF0ZSBDQTBZMBMG
+          ByqGSM49AgEGCCqGSM49AwEHA0IABDD0qIykoAHfkj2YasDq+Gsl67ybhOD8IxO/
+          F9a6XKfZz2FA0pbTAQ2UgzX17vmXv3cglAZBUZsR68R5EZ3vUVejZjBkMA4GA1Ud
+          DwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBTNzAClrgiC
+          dcrLZCVXfLAthaP6ATAfBgNVHSMEGDAWgBQNdoV0tgd9/1nnPl6Cci3/6gqXKjAK
+          BggqhkjOPQQDAgNJADBGAiEAzhWeXxipNv30JvAn8NimiYYH6zMX2KVl5XhPW0Sz
+          uhkCIQCJWvEQJXcZ43KlKm9B60DiEPplP5CN9vk7xVZTbVz92w==
           -----END CERTIFICATE-----
 
         # root_ca contains the text of the root CA Certificate
         root_ca: |
           -----BEGIN CERTIFICATE-----
-          MIIBpzCCAU6gAwIBAgIRAJkmAUcqMXWbl0D0Ynl29qUwCgYIKoZIzj0EAwIwMjET
-          MBEGA1UEChMKQ0EtaG9tZWxhYjEbMBkGA1UEAxMSQ0EtaG9tZWxhYiBSb290IENB
-          MB4XDTI2MDEwMTIyMTExNFoXDTM1MTIzMDIyMTExNFowMjETMBEGA1UEChMKQ0Et
-          aG9tZWxhYjEbMBkGA1UEAxMSQ0EtaG9tZWxhYiBSb290IENBMFkwEwYHKoZIzj0C
-          AQYIKoZIzj0DAQcDQgAEZunSl/GqhiTC+cC1KFOK/7Ul155vUUcEvUkQ5/y1UlE/
-          xacb7k1rXD/kcvb3lkXRI+ay69k2l3Linl9tdlwfOKNFMEMwDgYDVR0PAQH/BAQD
-          AgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFE5+74h/JJTf2ZJiPGND
-          s+wi1K4gMAoGCCqGSM49BAMCA0cAMEQCIG4PYNUpyQSmXPCl+3iL9iinzbBdp/iF
-          v2HPhgT0mvHFAiBgt59bzBSM1muFH4lb4G2MBkJNgVO1ykwFZaALBgvDEA==
+          MIIBqTCCAU6gAwIBAgIRAJ3DDtw0tSoMweSBfRCj2qcwCgYIKoZIzj0EAwIwMjET
+          MBEGA1UEChMKQ0EtSG9tZWxhYjEbMBkGA1UEAxMSQ0EtSG9tZWxhYiBSb290IENB
+          MB4XDTI2MDEwODAwMTg1NVoXDTM2MDEwNjAwMTg1NVowMjETMBEGA1UEChMKQ0Et
+          SG9tZWxhYjEbMBkGA1UEAxMSQ0EtSG9tZWxhYiBSb290IENBMFkwEwYHKoZIzj0C
+          AQYIKoZIzj0DAQcDQgAEDtxFW2oLSnhpFmIEWOhlCGRprvmg2dcFTDbaoUiSkQkx
+          1FU/DtEKG6V4Q3CgXFoluDPoz2T4pd/goDJqVp1cJaNFMEMwDgYDVR0PAQH/BAQD
+          AgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFA12hXS2B33/Wec+XoJy
+          Lf/qCpcqMAoGCCqGSM49BAMCA0kAMEYCIQCaqLJgRe/Df3nv04+Al09O48tjMoFJ
+          tb0rbwfQ+9RUMQIhAMrZHUohHqMW4pRcdCi6wDicbYp+rVgmLZ8eV7cJSOS9
           -----END CERTIFICATE-----
 
   valuesFrom:
     - kind: Secret
       name: step-ca-secrets
       valuesKey: values.yaml
-
-
