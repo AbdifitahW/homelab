@@ -5,18 +5,21 @@ metadata:
   namespace: monitoring
   annotations:
     kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure,web
+    traefik.ingress.kubernetes.io/router.tls.certresolver: homelab
 spec:
   rules:
-  - host: grafana.homelab.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: kube-prometheus-stack-grafana
-            port:
-              number: 80
+    - host: grafana.homelab.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kube-prometheus-stack-grafana
+                port:
+                  number: 80
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -27,16 +30,16 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: prometheus.homelab.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: kube-prometheus-stack-prometheus
-            port:
-              number: 9090
+    - host: prometheus.homelab.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kube-prometheus-stack-prometheus
+                port:
+                  number: 9090
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -47,13 +50,14 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: alertmanager.homelab.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: kube-prometheus-stack-alertmanager
-            port:
-              number: 9093
+    - host: alertmanager.homelab.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kube-prometheus-stack-alertmanager
+                port:
+                  number: 9093
+
