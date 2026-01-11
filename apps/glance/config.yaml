@@ -65,6 +65,7 @@ data:
               sites:
                 - title: Grafana
                   url: https://grafana.homelab.local
+                  allow-insecure: true 
                 - title: Prometheus
                   url: http://prometheus.homelab.local
                 - title: Alertmanager
