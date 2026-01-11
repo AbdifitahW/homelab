@@ -64,7 +64,7 @@ data:
               title: Services
               sites:
                 - title: Grafana
-                  url: http://grafana.homelab.local
+                  url: https://grafana.homelab.local
                 - title: Prometheus
                   url: http://prometheus.homelab.local
                 - title: Alertmanager
