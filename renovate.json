@@ -1,8 +1,0 @@
-{
-  "flux": {
-    "managerFilePatterns": ["/\\.yaml$/"]
-  },
-  "kubernetes": {
-    "managerFilePatterns": ["/\\.yaml$/"]
-  }
-}
