@@ -3,6 +3,10 @@
   "extends": [
     "config:recommended"
   ],
+  "enabledManagers": [
+    "flux",
+    "kubernetes"
+  ],
   "kubernetes": {
     "managerFilePatterns": [
       "(^|/)apps/.*\\.ya?ml",
