@@ -20,7 +20,7 @@ spec:
         kind: HelmRepository
         name: rook-release
         namespace: flux-system
-      version: "1.18.8"
+      version: "v1.18.9"
   values:
     csi:
       enableCephfsDriver: false
