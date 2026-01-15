@@ -10,15 +10,13 @@
   "kubernetes": {
     "managerFilePatterns": [
       "/^apps/.*\\.yaml$/",
-      "/^infrastructure/.*\\.yaml$/",
-      "(^|/)apps/.*\\.ya?ml$/",
-      "(^|/)infrastructure/.*\\.ya?ml$/"
+      "/^infrastructure/.*\\.yaml$/"
     ]
   },
   "flux": {
     "managerFilePatterns": [
-      "(^|/)apps/.*\\.ya?ml$/",
-      "(^|/)infrastructure/.*\\.ya?ml$/"
+      "/^apps/.*\\.yaml$/",
+      "/^infrastructure/.*\\.yaml$/"
     ]
   }
 }
