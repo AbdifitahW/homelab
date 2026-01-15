@@ -6,10 +6,7 @@
   "kubernetes": {
     "managerFilePatterns": ["(^|/)apps/.*\.ya?ml","(^|/)infrastructure/.*\.ya?ml"]
   },
-  {
   "flux": {
     "managerFilePatterns": ["(^|/)apps/.*\.ya?ml","(^|/)infrastructure/.*\.ya?ml"]
-  },
   }
-}
 }
