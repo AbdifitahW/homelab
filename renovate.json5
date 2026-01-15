@@ -9,6 +9,8 @@
   ],
   "kubernetes": {
     "managerFilePatterns": [
+      "/^apps/.*\\.yaml$/",
+      "/^infrastructure/.*\\.yaml$/",
       "(^|/)apps/.*\\.ya?ml$/",
       "(^|/)infrastructure/.*\\.ya?ml$/"
     ]
