@@ -19,8 +19,6 @@ spec:
   values:
     admin:
       enabled: true
-      existingSecret: "pihole-secret"
-      passwordKey: "password"
     dnsmasq:
       customDnsEntries:
         - address=/.homelab.local/10.0.0.230
@@ -30,3 +28,9 @@ spec:
       annotations:
         metallb.universe.tf/allow-shared-ip: pihole-svc
       externalTrafficPolicy: Cluster
+    extraEnvVars:
+      FTLCONF_webserver_api_password:
+        valueFrom:
+          secretKeyRef:
+            name: pihole-secret
+            key: password
