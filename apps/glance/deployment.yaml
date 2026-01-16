@@ -22,7 +22,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: step-ca-root-cert # The ConfigMap this value comes from.
-                  key: root_ca.crt # The key to fetch.
+                  key: "root_ca.crt" # The key to fetch.
           args: ["--config", "/app/config/glance.yml"]
           ports:
             - containerPort: 8080
