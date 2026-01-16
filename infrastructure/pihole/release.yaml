@@ -17,8 +17,6 @@ spec:
         namespace: flux-system
   timeout: 10m
   values:
-    admin:
-      enabled: true
     dnsmasq:
       customDnsEntries:
         - address=/.homelab.local/10.0.0.230
@@ -28,9 +26,7 @@ spec:
       annotations:
         metallb.universe.tf/allow-shared-ip: pihole-svc
       externalTrafficPolicy: Cluster
-    extraEnvVars:
+    extraEnvVarsSecret:
       FTLCONF_webserver_api_password:
-        valueFrom:
-          secretKeyRef:
-            name: pihole-secret
-            key: password
+        name: pihole-secret
+        key: password
