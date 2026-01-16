@@ -72,10 +72,10 @@ data:
                   icon: di:prometheus
                 - title: Alertmanager
                   url: http://alertmanager.homelab.local 
-                  icon: di:alermanager
+                  icon: di:alertmanager
                 - title: Pihole
                   url: https://pihole.homelab.local 
-                  icon: di:pihole
+                  icon: si:pihole
 
             - type: markets
               markets:
