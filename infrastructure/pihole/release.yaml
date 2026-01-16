@@ -19,7 +19,7 @@ spec:
   values:
     admin:
       enabled: true
-      existingSecrets: "pihole-secret"
+      existingSecret: "pihole-secret"
       passwordKey: "password"
     dnsmasq:
       customDnsEntries:
