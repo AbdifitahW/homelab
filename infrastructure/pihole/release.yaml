@@ -16,6 +16,7 @@ spec:
   timeout: 10m
   values:
     admin:
+      enabled: true
       existingSecrets: "pihole-secret"
       passwordKey: "password"
     dnsmasq:
