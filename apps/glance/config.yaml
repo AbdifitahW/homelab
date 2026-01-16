@@ -66,10 +66,16 @@ data:
                 - title: Grafana
                   url: https://grafana.homelab.local
                   allow-insecure: true 
+                  icon: di:grafana
                 - title: Prometheus
                   url: http://prometheus.homelab.local
+                  icon: di:prometheus
                 - title: Alertmanager
                   url: http://alertmanager.homelab.local 
+                  icon: di:alermanager
+                - title: Pihole
+                  url: https://pihole.homelab.local 
+                  icon: di:pihole
 
             - type: markets
               markets:
@@ -83,3 +89,7 @@ data:
                   name: Apple
                 - symbol: MSFT
                   name: Microsoft
+            - type: dns-stats
+              service: pihole
+              url: https://pihole.homelab.local
+              username: admin
