@@ -19,16 +19,14 @@ spec:
           command: ["/app/glance"]
           env:
             - name: SSL_CERT_FILE
-              valueFrom:
-                configMapKeyRef:
-                  name: step-ca-root-cert # The ConfigMap this value comes from.
-                  key: "root_ca.crt" # The key to fetch.
+              value: "/usr/local/share/ca-certificates/root_ca.crt"
           args: ["--config", "/app/config/glance.yml"]
           ports:
             - containerPort: 8080
           volumeMounts:
             - name: ca-cert
               mountPath: /usr/local/share/ca-certificates
+              readOnly: true
             - name: glance-config
               mountPath: /app/config
       volumes:
