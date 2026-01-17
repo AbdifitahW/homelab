@@ -91,4 +91,4 @@ data:
             - type: dns-stats
               service: pihole
               url: https://pihole.homelab.local
-              username: admin
+              password: admin
