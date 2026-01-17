@@ -89,6 +89,6 @@ data:
                 - symbol: MSFT
                   name: Microsoft
             - type: dns-stats
-              service: pihole
+              service: pihole-v6
               url: https://pihole.homelab.local
               password: admin
