@@ -1,3 +1,9 @@
+configMapGenerator:
+  - files:
+      - config.yaml=./resources/config.yaml
+    name: kromgo-cm
+generatorOptions:
+  disableNameSuffixHash: true
 resources:
   - release.yaml
   - ocirepository.yaml
