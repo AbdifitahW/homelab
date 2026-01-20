@@ -47,13 +47,14 @@ spec:
           http:
             port: *port
     ingress:
-      hosts:
-        - host: kromgo.homelab.local
-          paths:
-            - path: /
-              pathType: Prefix
-              service:
-                name: kromgo
+      kromgo:
+        hosts:
+          - host: kromgo.homelab.local
+            paths:
+              - path: /
+                pathType: Prefix
+                service:
+                  name: kromgo
     persistance:
       config-file:
         type: configMap
