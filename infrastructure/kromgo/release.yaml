@@ -21,7 +21,7 @@ spec:
         containers:
           kromgo:
             image:
-              reposistory: ghcr.io/kashalls/kromgo
+              repository: ghcr.io/kashalls/kromgo
               tag: v0.7.5
             env:
               PROMETHEUS_URL: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
@@ -55,7 +55,7 @@ spec:
               service:
                 name: kromgo
     persistance:
-      config:
+      config-file:
         type: configMap
         name: kromgo-cm
         globalMounts:
