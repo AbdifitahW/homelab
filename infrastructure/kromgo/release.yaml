@@ -64,6 +64,7 @@ spec:
       config-file:
         type: configMap
         name: kromgo-cm
+        namespace: monitoring
         globalMounts:
           - path: /kromgo/config.yaml
             subPath: config.yaml
