@@ -2,6 +2,7 @@ configMapGenerator:
   - files:
       - config.yaml=./resources/config.yaml
     name: kromgo-cm
+    namespace: monitoring
 generatorOptions:
   disableNameSuffixHash: true
 resources:
