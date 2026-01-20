@@ -48,13 +48,18 @@ spec:
             port: *port
     ingress:
       kromgo:
+        annotations:
+          kubernetes.io/ingress.class: traefik
+          traefik.ingress.kubernetes.io/router.tls: "true"
+          traefik.ingress.kubernetes.io/router.tls.certresolver: home
         hosts:
           - host: kromgo.homelab.local
             paths:
               - path: /
                 pathType: Prefix
                 service:
-                  name: kromgo
+                  identifier: kromgo
+                  port: *port
     persistance:
       config-file:
         type: configMap
