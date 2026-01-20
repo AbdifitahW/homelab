@@ -1,3 +1,4 @@
+![Talos](https://img.shields.io/endpoint)
 
 # My Homelab: A GitOps-Powered Kubernetes Playground
 
