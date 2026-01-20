@@ -10,6 +10,7 @@ spec:
   chartRef:
     kind: OCIRepository
     name: kromgo
+    namespace: flux-system
   driftDetection:
     mode: enabled
   values:
