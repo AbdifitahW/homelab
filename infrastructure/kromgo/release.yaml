@@ -51,7 +51,7 @@ spec:
         annotations:
           kubernetes.io/ingress.class: traefik
           traefik.ingress.kubernetes.io/router.tls: "true"
-          traefik.ingress.kubernetes.io/router.tls.certresolver: home
+          traefik.ingress.kubernetes.io/router.tls.certresolver: homelab
         hosts:
           - host: kromgo.homelab.local
             paths:
