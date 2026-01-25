@@ -1,0 +1,4 @@
+creation_rules:
+  - path_regex: infrastructure/.*\.sops\.ya?ml
+    pgp: 51DECC40A0CA13D21FA6FCF3775783D61292D91E
+    encrypted_regex: "^(data|stringData)$"

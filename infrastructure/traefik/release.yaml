@@ -18,13 +18,14 @@ spec:
   rollback:
     disableWait: true
   values:
-    web:
-      port: 80
-      redirections:
-        entryPoint:
-          to: websecure
-          scheme: https
-          permanent: true
+    ports:
+      web:
+        http:
+          redirections:
+            entryPoint:
+              to: websecure
+              scheme: https
+              permanent: true
     deployment:
       initContainers:
         # The "volume-permissions" init container is required if you run into permission issues.
@@ -66,3 +67,11 @@ spec:
       runAsUser: 65532
       fsGroup: 65532
       fsGroupChangePolicy: "OnRootMismatch"
+    service:
+      type: LoadBalancer
+      enabled: true
+      additionalServices:
+        external:
+          type: ClusterIP
+          labels:
+            traefik-service-labal: external
