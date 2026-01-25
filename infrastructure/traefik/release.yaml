@@ -19,6 +19,9 @@ spec:
     disableWait: true
   values:
     ports:
+      traefik:
+        expose:
+          external: true
       web:
         http:
           redirections:
