@@ -1,5 +1,3 @@
-![Talos](https://img.shields.io/endpoint)
-
 # My Homelab: A GitOps-Powered Kubernetes Playground
 
 This repository contains the complete configuration for my personal homelab. The primary goal of this project is to build and manage a Kubernetes cluster that mimics a real-world production environment. It serves as a playground for me to experiment with cloud-native technologies, practice GitOps principles, and learn how to manage a production-like cluster.
